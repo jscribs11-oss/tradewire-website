@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Managed Service - $3,087/month | TradeWire</title>
+  <meta name="description" content="Complete business automation with dedicated team. All automations + SEO + personal account manager for 80% less than traditional agencies.">
+  <link rel="canonical" href="https://tradewire.ai/premium-service">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --blue: #2563eb; --blue-dark: #1d4ed8; --blue-light: #dbeafe; 
+      --dark: #0f172a; --gray-900: #1e293b; --gray-700: #334155; --gray-500: #64748b;
+      --gray-300: #cbd5e1; --gray-100: #f1f5f9; --white: #ffffff; --green: #22c55e;
+      --orange: #f59e0b; --red: #ef4444; --purple: #8b5cf6; --gold: #f59e0b; --radius: 12px;
+    }
+    body { font-family: 'Inter', sans-serif; color: var(--gray-900); line-height: 1.6; background: var(--white); }
+    
+    /* Navigation */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-100); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; }
+    .logo { font-weight: 800; font-size: 1.4rem; color: var(--blue); text-decoration: none; }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--gray-700); font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta { background: var(--blue); color: var(--white) !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; }
+    
+    /* Hero */
+    .hero { padding: 140px 24px 80px; background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 50%, #ea580c 100%); color: var(--white); text-align: center; }
+    .hero-badge { display: inline-block; background: var(--gold); color: var(--white); padding: 8px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 700; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; line-height: 1.1; margin-bottom: 24px; text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 40px; opacity: 0.95; }
+    .hero-price { font-size: 3rem; font-weight: 900; color: var(--white); margin: 24px 0; text-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+    .hero-savings { font-size: 1.4rem; font-weight: 700; margin-bottom: 40px; }
+    
+    /* Features */
+    .section { padding: 80px 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin: 40px 0; }
+    .feature-card { background: var(--white); border: 2px solid var(--gray-100); border-radius: var(--radius); padding: 32px; text-align: center; transition: all 0.3s; }
+    .feature-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+    .feature-icon { font-size: 3rem; margin-bottom: 16px; }
+    .feature-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; }
+    .feature-description { color: var(--gray-500); }
+    
+    /* Value Props */
+    .value-props { background: var(--dark); color: var(--white); text-align: center; }
+    .comparison-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 40px 0; }
+    .comparison-card { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius); padding: 24px; text-align: center; }
+    .comparison-price { font-size: 2rem; font-weight: 800; color: var(--red); margin: 16px 0; }
+    .tradewire-card { border-color: var(--gold); background: rgba(245,158,11,0.1); }
+    .tradewire-card .comparison-price { color: var(--gold); }
+    
+    /* CTA */
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; border-radius: 10px; font-size: 1.1rem; font-weight: 600; text-decoration: none; border: none; cursor: pointer; transition: all 0.2s; }
+    .btn-primary { background: var(--gold); color: var(--white); }
+    .btn-primary:hover { background: #d97706; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.3); }
+    .btn-secondary { background: var(--white); color: var(--gold); border: 2px solid var(--gold); }
+    .btn-secondary:hover { background: var(--gold); color: var(--white); }
+    
+    /* Footer */
+    footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center; }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .features-grid { grid-template-columns: 1fr; }
+      .comparison-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">TradeWire</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Automations</a>
+        <a href="seo.html">SEO Services</a>
+        <a href="bundles.html">Bundles</a>
+        <a href="book.html" class="nav-cta">Start Free Trial</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">👑 PREMIUM MANAGED SERVICE</div>
+      <h1>Complete Business Automation<br>with Dedicated Team</h1>
+      <p>All automations + professional SEO + personal account manager.<br>For contractors doing $5M+ who want everything handled.</p>
+      
+      <div class="hero-price">$3,087/month</div>
+      <div class="hero-savings">Save $12,000+/month vs traditional agencies</div>
+      
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="book.html" class="btn btn-primary">Schedule Strategy Call</a>
+        <a href="#features" class="btn btn-secondary">See What's Included</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5rem; font-weight: 800;">Everything Included</h2>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3 class="feature-title">All 7 Automations</h3>
+          <div class="feature-description">
+            <p><strong>Complete automation suite ($373 value):</strong></p>
+            <ul style="list-style: none; text-align: left; margin-top: 12px;">
+              <li>• AI Receptionist + Booking ($189)</li>
+              <li>• Commercial Outreach ($180)</li>
+              <li>• Lead Follow-Up Engine ($44)</li>
+              <li>• Quote Follow-Up System ($28)</li>
+              <li>• Review Autopilot ($16)</li>
+              <li>• Missed Call Recovery ($8)</li>
+              <li>• No-Show Recovery ($9)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3 class="feature-title">Complete SEO Domination</h3>
+          <div class="feature-description">
+            <p><strong>Premium SEO package ($570 value):</strong></p>
+            <ul style="list-style: none; text-align: left; margin-top: 12px;">
+              <li>• 20+ SEO articles per month</li>
+              <li>• 200+ backlink outreach emails</li>
+              <li>• 10-15 quality backlinks monthly</li>
+              <li>• Complete local SEO optimization</li>
+              <li>• Monthly strategy & reporting</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">👨‍💼</div>
+          <h3 class="feature-title">Dedicated Account Manager</h3>
+          <div class="feature-description">
+            <p><strong>Personal business partner ($1,500 value):</strong></p>
+            <ul style="list-style: none; text-align: left; margin-top: 12px;">
+              <li>• Direct phone & email access</li>
+              <li>• Weekly strategy calls (not monthly)</li>
+              <li>• Custom workflow implementations</li>
+              <li>• Quarterly business reviews</li>
+              <li>• Priority 2-hour response time</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">White-Glove Setup</h3>
+          <div class="feature-description">
+            <p><strong>Complete done-for-you service:</strong></p>
+            <ul style="list-style: none; text-align: left; margin-top: 12px;">
+              <li>• Full business analysis & strategy</li>
+              <li>• All automations deployed in 48 hours</li>
+              <li>• Staff training & documentation</li>
+              <li>• Ongoing optimization & updates</li>
+              <li>• Unlimited revisions included</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3 class="feature-title">Performance Monitoring</h3>
+          <div class="feature-description">
+            <p><strong>Data-driven optimization:</strong></p>
+            <ul style="list-style: none; text-align: left; margin-top: 12px;">
+              <li>• Real-time dashboard access</li>
+              <li>• Monthly ROI reports</li>
+              <li>• Conversion rate optimization</li>
+              <li>• A/B testing & improvements</li>
+              <li>• Custom KPI tracking</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3 class="feature-title">Custom Implementations</h3>
+          <div class="feature-description">
+            <p><strong>Tailored to your business:</strong></p>
+            <ul style="list-style: none; text-align: left; margin-top: 12px;">
+              <li>• Industry-specific customizations</li>
+              <li>• Integration with existing systems</li>
+              <li>• Special workflow requirements</li>
+              <li>• Multi-location coordination</li>
+              <li>• Team collaboration tools</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Comparison -->
+  <section class="section value-props">
+    <div class="container">
+      <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">Why Premium Makes Sense</h2>
+      <p style="font-size: 1.2rem; opacity: 0.8; margin-bottom: 40px;">See how Premium compares to traditional solutions</p>
+      
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <h3 style="color: var(--white); margin-bottom: 8px;">Full Marketing Agency</h3>
+          <div class="comparison-price">$15,000/month</div>
+          <ul style="list-style: none; text-align: left;">
+            <li>❌ 6-month contracts</li>
+            <li>❌ Generic business focus</li>
+            <li>❌ No automation included</li>
+            <li>❌ Multiple vendors to manage</li>
+            <li>❌ Slow results (6+ months)</li>
+          </ul>
+        </div>
+
+        <div class="comparison-card">
+          <h3 style="color: var(--white); margin-bottom: 8px;">In-House Team</h3>
+          <div class="comparison-price">$12,000+/month</div>
+          <ul style="list-style: none; text-align: left;">
+            <li>❌ Salaries + benefits + training</li>
+            <li>❌ Management overhead</li>
+            <li>❌ Turnover and replacement costs</li>
+            <li>❌ Limited expertise per person</li>
+            <li>❌ Vacation/sick coverage needed</li>
+          </ul>
+        </div>
+
+        <div class="comparison-card tradewire-card">
+          <h3 style="color: var(--gold); margin-bottom: 8px;">TradeWire Premium</h3>
+          <div class="comparison-price">$3,087/month</div>
+          <ul style="list-style: none; text-align: left;">
+            <li>✅ No contracts, cancel anytime</li>
+            <li>✅ Construction industry experts</li>
+            <li>✅ Complete automation + SEO</li>
+            <li>✅ Single dedicated team</li>
+            <li>✅ Results in 30-90 days</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div style="margin-top: 40px;">
+        <h3 style="color: var(--gold); margin-bottom: 16px;">Premium ROI Calculator</h3>
+        <p style="opacity: 0.8; margin-bottom: 20px;">For a contractor doing $5M revenue:</p>
+        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: left; max-width: 500px; margin: 0 auto;">
+          <p><strong>Conservative 15% lead conversion improvement:</strong></p>
+          <p style="margin: 8px 0;">• Additional revenue: $750,000/year</p>
+          <p style="margin: 8px 0;">• Premium service cost: $37,044/year</p>
+          <p style="margin: 8px 0; color: var(--gold); font-weight: 700;">• Net ROI: $712,956/year (20x return)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background: linear-gradient(135deg, var(--gold) 0%, #d97706 100%); color: var(--white); text-align: center;">
+    <div class="container">
+      <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">Ready to Scale Your Business?</h2>
+      <p style="font-size: 1.3rem; opacity: 0.9; margin-bottom: 40px;">Schedule a strategy call to discuss your specific needs and see if Premium is right for you.</p>
+      
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="book.html" class="btn" style="background: var(--white); color: var(--gold); font-weight: 700;">Schedule Strategy Call</a>
+        <a href="mailto:joe@tradewire.ai" class="btn" style="background: transparent; border: 2px solid white; color: white;">Email Questions</a>
+      </div>
+      
+      <p style="margin-top: 24px; font-size: 0.9rem; opacity: 0.8;">Premium service available for contractors doing $3M+ annual revenue</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 TradeWire. All rights reserved.</p>
+      <p style="margin-top: 8px;"><a href="bundles.html" style="color: var(--blue);">← See Standard Bundles</a> | <a href="index.html" style="color: var(--blue);">All Automations</a></p>
+    </div>
+  </footer>
+</body>
+</html>
