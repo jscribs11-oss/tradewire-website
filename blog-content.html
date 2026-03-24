@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Content Bundle - $135/month | TradeWire</title>
+  <meta name="description" content="Complete SEO content bundle for contractors. 12-15 articles + local optimization + auto-publishing for $135/month vs $5,000 agencies.">
+  <meta property="og:title" content="SEO Content Bundle - $135/month | TradeWire">
+  <meta property="og:description" content="Complete SEO content package: 12-15 articles monthly + local SEO + publishing automation for contractors.">
+  <link rel="canonical" href="https://tradewire.ai/seo-content-bundle">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --blue: #2563eb; --blue-dark: #1d4ed8; --blue-light: #dbeafe; 
+      --dark: #0f172a; --gray-900: #1e293b; --gray-700: #334155; --gray-500: #64748b;
+      --gray-300: #cbd5e1; --gray-100: #f1f5f9; --white: #ffffff; --green: #22c55e;
+      --orange: #f59e0b; --red: #ef4444; --purple: #8b5cf6; --radius: 12px;
+    }
+    body { font-family: 'Inter', sans-serif; color: var(--gray-900); line-height: 1.6; background: var(--white); }
+    
+    /* Navigation */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-100); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; }
+    .logo { font-weight: 800; font-size: 1.4rem; color: var(--blue); text-decoration: none; }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--gray-700); font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta { background: var(--blue); color: var(--white) !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; transition: all 0.2s; }
+    .nav-cta:hover { background: var(--blue-dark); }
+    
+    /* Hero */
+    .hero { padding: 140px 24px 80px; background: linear-gradient(135deg, var(--purple) 0%, #7c3aed 100%); color: var(--white); text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(255,255,255,0.2); color: var(--white); padding: 6px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+    .hero-price { font-size: 4rem; font-weight: 900; margin: 20px 0; }
+    .hero-price .small { font-size: 2rem; opacity: 0.8; }
+    .hero p { font-size: 1.3rem; opacity: 0.9; max-width: 600px; margin: 0 auto 40px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; border-radius: 10px; font-size: 1.1rem; font-weight: 600; text-decoration: none; border: none; cursor: pointer; transition: all 0.2s; }
+    .btn-primary { background: var(--white); color: var(--purple); }
+    .btn-primary:hover { background: var(--gray-100); transform: translateY(-2px); }
+    .btn-secondary { background: transparent; color: var(--white); border: 2px solid var(--white); }
+    
+    /* Content Examples */
+    .section { padding: 80px 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-title { font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 20px; }
+    .section-subtitle { font-size: 1.2rem; color: var(--gray-500); margin-bottom: 40px; }
+    
+    .examples { background: var(--gray-50); }
+    .examples-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px; }
+    .example-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; }
+    .example-header { background: var(--blue-50); padding: 16px; border-bottom: 1px solid var(--gray-200); }
+    .example-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 4px; }
+    .example-keyword { font-size: 0.85rem; color: var(--blue); font-weight: 500; }
+    .example-content { padding: 20px; }
+    .example-excerpt { font-size: 0.9rem; color: var(--gray-600); line-height: 1.6; margin-bottom: 16px; }
+    .example-stats { display: flex; gap: 16px; font-size: 0.8rem; }
+    .stat { color: var(--gray-500); }
+    .stat strong { color: var(--green); }
+    
+    /* How It Works */
+    .how-it-works { background: var(--white); }
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; }
+    .step { text-align: center; }
+    .step-number { width: 60px; height: 60px; background: var(--purple); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; margin: 0 auto 16px; }
+    .step h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; }
+    .step p { color: var(--gray-500); font-size: 0.95rem; }
+    
+    /* Features */
+    .features { background: var(--purple-50); }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+    .feature { display: flex; align-items: flex-start; gap: 12px; }
+    .feature-icon { color: var(--purple); font-size: 1.5rem; }
+    .feature-content h4 { font-weight: 600; margin-bottom: 4px; }
+    .feature-content p { font-size: 0.9rem; color: var(--gray-500); }
+    
+    /* Pricing */
+    .pricing { background: var(--dark); color: var(--white); text-align: center; }
+    .pricing h2 { color: var(--white); }
+    .price-card { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius); padding: 40px; max-width: 400px; margin: 40px auto; }
+    .price { font-size: 3rem; font-weight: 900; color: var(--purple); margin: 20px 0; }
+    .price .small { font-size: 1.5rem; opacity: 0.8; }
+    .price-features { text-align: left; margin: 20px 0; }
+    .price-features li { margin-bottom: 8px; list-style: none; position: relative; padding-left: 24px; }
+    .price-features li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 800; }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero-price { font-size: 3rem; }
+      .examples-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">TradeWire</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="seo.html">All SEO Services</a>
+        <a href="bundles.html">Bundles</a>
+        <a href="book.html" class="nav-cta">Start Free Trial</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">Complete SEO Content Solution</div>
+      <h1>SEO Content Bundle for Contractors</h1>
+      <div class="hero-price">$135<span class="small">/month</span></div>
+      <p>12-15 SEO-optimized articles per month with local optimization and auto-publishing. Complete content strategy that dominates your local market.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+        <a href="#" class="btn btn-primary">Start 7-Day Free Trial →</a>
+        <a href="#examples" class="btn btn-secondary">See Content Examples</a>
+      </div>
+      <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">No setup fees • No contracts • Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- Content Examples -->
+  <section class="section examples" id="examples">
+    <div class="container">
+      <h2 class="section-title">Real Content Examples</h2>
+      <p class="section-subtitle">See the type of contractor-focused content included in our $135/month SEO Content Bundle</p>
+      
+      <div class="examples-grid">
+        <div class="example-card">
+          <div class="example-header">
+            <div class="example-title">Why Your Attic Insulation is Costing You Money</div>
+            <div class="example-keyword">Target: "attic insulation problems"</div>
+          </div>
+          <div class="example-content">
+            <div class="example-excerpt">
+              Most homeowners don't realize that poor attic insulation can increase energy bills by 40-60%. If you've noticed higher heating costs this winter, your insulation might be the culprit. Here are the warning signs every homeowner should know...
+            </div>
+            <div class="example-stats">
+              <div class="stat">Search Volume: <strong>2,400/month</strong></div>
+              <div class="stat">Competition: <strong>Medium</strong></div>
+              <div class="stat">Lead Intent: <strong>High</strong></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="example-card">
+          <div class="example-header">
+            <div class="example-title">5 Signs You Need Foundation Repair (Before It's Too Late)</div>
+            <div class="example-keyword">Target: "foundation repair signs"</div>
+          </div>
+          <div class="example-content">
+            <div class="example-excerpt">
+              Foundation problems don't fix themselves – they get worse and more expensive. These 5 warning signs could save you thousands in repair costs if you catch them early. Don't ignore that crack in your basement wall...
+            </div>
+            <div class="example-stats">
+              <div class="stat">Search Volume: <strong>1,800/month</strong></div>
+              <div class="stat">Competition: <strong>Low</strong></div>
+              <div class="stat">Lead Intent: <strong>Very High</strong></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="example-card">
+          <div class="example-header">
+            <div class="example-title">How to Choose a Reliable Roofing Contractor in [Your City]</div>
+            <div class="example-keyword">Target: "roofing contractor [city]"</div>
+          </div>
+          <div class="example-content">
+            <div class="example-excerpt">
+              Getting multiple roofing quotes can be overwhelming. How do you know which contractor will actually show up and do quality work? Here's your insider's guide to avoiding roofing scams and finding contractors who deliver...
+            </div>
+            <div class="example-stats">
+              <div class="stat">Search Volume: <strong>3,200/month</strong></div>
+              <div class="stat">Competition: <strong>Medium</strong></div>
+              <div class="stat">Lead Intent: <strong>Very High</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 40px;">
+        <p style="color: var(--gray-500); margin-bottom: 16px;">💡 Each post is customized for your trade, location, and target customers</p>
+        <a href="#how-it-works" class="btn" style="background: var(--purple); color: var(--white);">See How We Create These →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title">How We Create Your Content</h2>
+      <p class="section-subtitle">Professional process that delivers results in 2 weeks, not 2 months</p>
+      
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Trade & Location Analysis</h3>
+          <p>We research your specific trade, local market, and what your customers actually search for when they need your services.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Keyword Research</h3>
+          <p>Find high-value, low-competition keywords that your competitors aren't targeting but your customers are searching for.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Content Creation</h3>
+          <p>Write contractor-focused content that solves real problems and positions you as the local expert homeowners trust.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>SEO Optimization</h3>
+          <p>Add proper title tags, meta descriptions, internal links, and schema markup to help Google understand and rank your content.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">5</div>
+          <h3>Automatic Publishing</h3>
+          <p>Content goes live on your website automatically. We handle the technical stuff, you get the leads.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">6</div>
+          <h3>Google Indexing</h3>
+          <p>Submit to Google for immediate indexing so your content starts ranking and driving traffic as soon as possible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section features">
+    <div class="container">
+      <h2 class="section-title">Everything Included for $135/month</h2>
+      <p class="section-subtitle">Complete SEO content strategy for 97% less than traditional agencies</p>
+      
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon">📝</div>
+          <div class="feature-content">
+            <h4>12-15 Posts Per Month</h4>
+            <p>Professionally written, 800-1,200 word blog posts targeting high-value contractor keywords</p>
+          </div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-icon">🎯</div>
+          <div class="feature-content">
+            <h4>Contractor-Specific Keywords</h4>
+            <p>Target searches like "[your trade] near me" and problem-solving content</p>
+          </div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-icon">🚀</div>
+          <div class="feature-content">
+            <h4>Automatic Publishing</h4>
+            <p>Content goes live on your website automatically - no manual work required</p>
+          </div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-icon">📍</div>
+          <div class="feature-content">
+            <h4>Local SEO Focus</h4>
+            <p>Content optimized for your city and service area to dominate local search</p>
+          </div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-icon">🔍</div>
+          <div class="feature-content">
+            <h4>Google Indexing</h4>
+            <p>Automatic submission to Google for faster ranking and traffic generation</p>
+          </div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-icon">📊</div>
+          <div class="feature-content">
+            <h4>SEO Optimization</h4>
+            <p>Proper title tags, meta descriptions, and schema markup included</p>
+          </div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-icon">💼</div>
+          <div class="feature-content">
+            <h4>Trade Expertise</h4>
+            <p>Written by experts who understand construction and speak your language</p>
+          </div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-icon">⏰</div>
+          <div class="feature-content">
+            <h4>2-Week Setup</h4>
+            <p>First posts go live within 2 weeks, then 2 new posts every month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section pricing">
+    <div class="container">
+      <h2 class="section-title">Complete SEO Content Package</h2>
+      <p class="section-subtitle">Professional SEO content bundle for 97% less than agencies</p>
+      
+      <div class="price-card">
+        <h3>SEO Content Bundle</h3>
+        <div class="price">$135<span class="small">/month</span></div>
+        <p>Quarterly: $365 (save $40)</p>
+        
+        <ul class="price-features">
+          <li>12-15 SEO-optimized posts per month</li>
+          <li>Contractor-specific keyword targeting</li>
+          <li>Automatic WordPress publishing</li>
+          <li>Google indexing and submission</li>
+          <li>Local SEO optimization</li>
+          <li>Content calendar planning</li>
+          <li>Meta tags & schema markup</li>
+          <li>Trade expertise and accuracy</li>
+          <li>Email support included</li>
+          <li>Cancel anytime</li>
+        </ul>
+        
+        <a href="#" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 20px;">Start 7-Day Free Trial</a>
+        <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 12px;">No credit card required for trial</p>
+      </div>
+      
+      <div style="margin-top: 40px;">
+        <h4 style="margin-bottom: 16px;">Want Even More Power?</h4>
+        <p style="margin-bottom: 20px; opacity: 0.8;">Add backlinks and priority support with our Super SEO Bundle:</p>
+        <a href="super-seo-bundle.html" class="btn btn-secondary">Super SEO Bundle - $285/month →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="section" style="background: var(--gray-50);">
+    <div class="container">
+      <h2 class="section-title">vs Traditional Content Agencies</h2>
+      
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+          <div style="background: var(--white); padding: 32px; border-radius: var(--radius); border-left: 4px solid var(--red);">
+            <h3 style="color: var(--red); margin-bottom: 16px;">SEO Content Agency</h3>
+            <div style="font-size: 2rem; font-weight: 800; color: var(--red); margin-bottom: 16px;">$5,000/month</div>
+            <ul style="list-style: none;">
+              <li style="margin-bottom: 8px;">❌ Generic business content</li>
+              <li style="margin-bottom: 8px;">❌ No construction expertise</li>
+              <li style="margin-bottom: 8px;">❌ 6-month minimum contracts</li>
+              <li style="margin-bottom: 8px;">❌ Setup fees + hidden costs</li>
+              <li style="margin-bottom: 8px;">❌ Slow results (6+ months)</li>
+            </ul>
+          </div>
+          
+          <div style="background: var(--green); color: var(--white); padding: 32px; border-radius: var(--radius);">
+            <h3 style="margin-bottom: 16px;">TradeWire SEO Content Bundle</h3>
+            <div style="font-size: 2rem; font-weight: 800; margin-bottom: 16px;">$135/month</div>
+            <ul style="list-style: none;">
+              <li style="margin-bottom: 8px;">✅ 12-15 articles per month</li>
+              <li style="margin-bottom: 8px;">✅ Construction trade expertise</li>
+              <li style="margin-bottom: 8px;">✅ No contracts, cancel anytime</li>
+              <li style="margin-bottom: 8px;">✅ Local SEO optimization</li>
+              <li style="margin-bottom: 8px;">✅ Fast results (30-90 days)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="margin-bottom: 24px;">
+          <h4 style="margin-bottom: 8px; font-weight: 600;">Do you write content for all construction trades?</h4>
+          <p>Yes! We have expertise in roofing, HVAC, plumbing, electrical, foundation repair, insulation, siding, windows, flooring, and more. Each post is customized for your specific trade.</p>
+        </div>
+        
+        <div style="margin-bottom: 24px;">
+          <h4 style="margin-bottom: 8px; font-weight: 600;">How do you publish content to my website?</h4>
+          <p>We connect directly to your WordPress site or CMS during setup. Content publishes automatically - no manual work required from you.</p>
+        </div>
+        
+        <div style="margin-bottom: 24px;">
+          <h4 style="margin-bottom: 8px; font-weight: 600;">What if I don't have a website yet?</h4>
+          <p>No problem! We can help you set up a simple WordPress site, or we can hold your content until your site is ready.</p>
+        </div>
+        
+        <div style="margin-bottom: 24px;">
+          <h4 style="margin-bottom: 8px; font-weight: 600;">How long before I see results?</h4>
+          <p>Most contractors start seeing increased website traffic within 2-4 weeks. Lead generation typically improves within 6-8 weeks as content builds authority.</p>
+        </div>
+        
+        <div style="margin-bottom: 24px;">
+          <h4 style="margin-bottom: 8px; font-weight: 600;">Can I see the content before it goes live?</h4>
+          <p>Yes! We'll send you a preview of each post for approval before publishing. You can request changes or edits at no extra cost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section" style="background: var(--purple); color: var(--white); text-align: center;">
+    <div class="container">
+      <h2>Ready to Dominate Your Local Market?</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 32px;">Complete SEO Content Bundle for just $135/month (97% less than agencies)</p>
+      <a href="#" class="btn" style="background: var(--white); color: var(--purple); font-size: 1.2rem; padding: 20px 40px;">Start 7-Day Free Trial →</a>
+      <p style="margin-top: 20px; opacity: 0.8;">Setup in 2 weeks • No contracts • Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--dark); color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center;">
+    <div class="container">
+      <p>© 2026 TradeWire. All rights reserved.</p>
+      <p style="margin-top: 8px;"><a href="seo.html" style="color: var(--blue);">← Back to All SEO Bundles</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

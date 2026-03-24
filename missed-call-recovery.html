@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missed Call Recovery - $8/month | TradeWire</title>
+  <meta name="description" content="Never lose another lead to a missed call. 60-second auto text-back captures contact info automatically. Start your 7-day free trial for just $8/month.">
+  <meta property="og:title" content="Missed Call Recovery - $8/month | TradeWire">
+  <meta property="og:description" content="60-second auto text-back for missed calls. Capture leads automatically. 7-day free trial.">
+  <link rel="canonical" href="https://tradewire.ai/missed-call-recovery">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --blue: #2563eb; --blue-dark: #1d4ed8; --blue-light: #dbeafe; 
+      --dark: #0f172a; --gray-900: #1e293b; --gray-700: #334155; --gray-500: #64748b;
+      --gray-300: #cbd5e1; --gray-100: #f1f5f9; --white: #ffffff; --green: #22c55e;
+      --orange: #f59e0b; --red: #ef4444; --radius: 12px;
+    }
+    body { font-family: 'Inter', sans-serif; color: var(--gray-900); line-height: 1.6; background: var(--white); }
+    
+    /* Navigation */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-100); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; }
+    .logo { font-weight: 800; font-size: 1.4rem; color: var(--blue); text-decoration: none; }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--gray-700); font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta { background: var(--blue); color: var(--white) !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; transition: all 0.2s; }
+    .nav-cta:hover { background: var(--blue-dark); }
+    
+    /* Hero */
+    .hero { padding: 140px 24px 80px; background: linear-gradient(135deg, var(--green) 0%, #16a34a 100%); color: var(--white); text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(255,255,255,0.2); color: var(--white); padding: 6px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+    .hero-price { font-size: 4rem; font-weight: 900; margin: 20px 0; }
+    .hero-price .small { font-size: 2rem; opacity: 0.8; }
+    .hero p { font-size: 1.3rem; opacity: 0.9; max-width: 600px; margin: 0 auto 40px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; border-radius: 10px; font-size: 1.1rem; font-weight: 600; text-decoration: none; border: none; cursor: pointer; transition: all 0.2s; }
+    .btn-primary { background: var(--white); color: var(--green); }
+    .btn-primary:hover { background: var(--gray-100); transform: translateY(-2px); }
+    .btn-secondary { background: transparent; color: var(--white); border: 2px solid var(--white); }
+    
+    /* Problem/Solution */
+    .section { padding: 80px 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-title { font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 20px; }
+    .section-subtitle { font-size: 1.2rem; color: var(--gray-500); margin-bottom: 40px; }
+    
+    .problem { background: var(--gray-50); }
+    .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
+    .problem-card { background: var(--white); padding: 32px; border-radius: var(--radius); border-left: 4px solid var(--red); }
+    .problem-card h3 { font-size: 1.4rem; font-weight: 700; color: var(--red); margin-bottom: 12px; }
+    .problem-stat { font-size: 2.5rem; font-weight: 800; color: var(--red); margin-bottom: 8px; }
+    
+    .solution { background: var(--white); }
+    .solution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .solution-step { text-align: center; padding: 24px; }
+    .step-number { width: 60px; height: 60px; background: var(--green); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; margin: 0 auto 16px; }
+    .solution-step h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; }
+    
+    /* Features */
+    .features { background: var(--blue-50); }
+    .features-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+    .feature { display: flex; align-items: flex-start; gap: 12px; }
+    .feature-icon { color: var(--green); font-size: 1.5rem; }
+    .feature-content h4 { font-weight: 600; margin-bottom: 4px; }
+    
+    /* Pricing */
+    .pricing { background: var(--dark); color: var(--white); text-align: center; }
+    .pricing h2 { color: var(--white); }
+    .price-card { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius); padding: 40px; max-width: 400px; margin: 40px auto; }
+    .price { font-size: 3rem; font-weight: 900; color: var(--green); margin: 20px 0; }
+    .price .small { font-size: 1.5rem; opacity: 0.8; }
+    .price-features { text-align: left; margin: 20px 0; }
+    .price-features li { margin-bottom: 8px; list-style: none; position: relative; padding-left: 24px; }
+    .price-features li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 800; }
+    
+    /* Footer */
+    footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center; }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero-price { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">TradeWire</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">All Automations</a>
+        <a href="bundles.html">Bundles</a>
+        <a href="book.html" class="nav-cta">Start Free Trial</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">Most Affordable Automation</div>
+      <h1>Never Lose Another Lead to a Missed Call</h1>
+      <div class="hero-price">$8<span class="small">/month</span></div>
+      <p>60-second auto text-back captures contact info from every missed call. The simplest automation that every contractor needs.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+        <a href="#" class="btn btn-primary">Start 7-Day Free Trial →</a>
+        <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+      </div>
+      <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">No setup fees • No contracts • Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="section problem">
+    <div class="container">
+      <h2 class="section-title">The Hidden Cost of Missed Calls</h2>
+      <p class="section-subtitle">You're losing money every time your phone rings and no one answers</p>
+      
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-stat">40-60%</div>
+          <h3>Calls Go Unanswered</h3>
+          <p>You're on a job site, in an attic, driving between jobs. Meanwhile, potential customers are calling right now and hanging up when they reach voicemail.</p>
+        </div>
+        
+        <div class="problem-card">
+          <div class="problem-stat">78%</div>
+          <h3>Hire the First Callback</h3>
+          <p>By the time you call back, they've already hired someone else. The first contractor to respond gets the job, even if they're more expensive.</p>
+        </div>
+        
+        <div class="problem-card">
+          <div class="problem-stat">$500+</div>
+          <h3>Per Missed Lead</h3>
+          <p>Each missed call represents $500-$5,000+ in potential revenue. Miss just 2 calls per week and you're losing $50,000+ annually.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution -->
+  <section class="section solution" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title">How Missed Call Recovery Works</h2>
+      <p class="section-subtitle">Automatic text response within 60 seconds of every missed call</p>
+      
+      <div class="solution-grid">
+        <div class="solution-step">
+          <div class="step-number">1</div>
+          <h3>Call Goes to Voicemail</h3>
+          <p>Customer calls while you're busy. Instead of just leaving voicemail, our system kicks in automatically.</p>
+        </div>
+        
+        <div class="solution-step">
+          <div class="step-number">2</div>
+          <h3>Instant Text Response</h3>
+          <p>Within 60 seconds, customer receives: "Thanks for calling! I'm on a job site but saw your call. What can I help you with?"</p>
+        </div>
+        
+        <div class="solution-step">
+          <div class="step-number">3</div>
+          <h3>Lead Information Captured</h3>
+          <p>Customer responds with their needs. System captures contact info, project details, and timeline automatically.</p>
+        </div>
+        
+        <div class="solution-step">
+          <div class="step-number">4</div>
+          <h3>You Get Instant Alert</h3>
+          <p>Receive text summary of the lead with their info, project type, and urgency level. Call back when convenient.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section features">
+    <div class="container">
+      <h2 class="section-title">Everything Included for $8/month</h2>
+      <p class="section-subtitle">Professional missed call management for less than a sandwich</p>
+      
+      <div class="features-list">
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-content">
+            <h4>60-Second Response</h4>
+            <p>Automatic text within 1 minute of missed call</p>
+          </div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <div class="feature-content">
+            <h4>Your Existing Number</h4>
+            <p>Works with your current business phone</p>
+          </div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-icon">🎯</div>
+          <div class="feature-content">
+            <h4>Lead Qualification</h4>
+            <p>Captures project type, timeline, and budget</p>
+          </div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-icon">📊</div>
+          <div class="feature-content">
+            <h4>Instant Alerts</h4>
+            <p>Get text summary of each lead immediately</p>
+          </div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-icon">⏰</div>
+          <div class="feature-content">
+            <h4>Business Hours Aware</h4>
+            <p>Different messages for day vs after-hours</p>
+          </div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-icon">🔧</div>
+          <div class="feature-content">
+            <h4>2-Hour Setup</h4>
+            <p>We configure everything. You just start getting leads</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section pricing">
+    <div class="container">
+      <h2 class="section-title">Simple, Affordable Pricing</h2>
+      <p class="section-subtitle">Less than most contractors spend on coffee in a week</p>
+      
+      <div class="price-card">
+        <h3>Missed Call Recovery</h3>
+        <div class="price">$8<span class="small">/month</span></div>
+        <p>Quarterly: $22 (save $2)</p>
+        
+        <ul class="price-features">
+          <li>60-second auto text response</li>
+          <li>Lead information capture</li>
+          <li>Instant lead alerts to you</li>
+          <li>Works with your phone number</li>
+          <li>Business hours customization</li>
+          <li>2-hour professional setup</li>
+          <li>Email support included</li>
+          <li>Cancel anytime</li>
+        </ul>
+        
+        <a href="#" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 20px;">Start 7-Day Free Trial</a>
+        <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 12px;">No credit card required for trial</p>
+      </div>
+      
+      <div style="margin-top: 40px;">
+        <h4 style="margin-bottom: 16px;">Ready for More Automation?</h4>
+        <p style="margin-bottom: 20px; opacity: 0.8;">Combine with other automations and save:</p>
+        <a href="bundles.html" class="btn btn-secondary">See Popular Bundles →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="margin-bottom: 24px;">
+          <h4 style="margin-bottom: 8px; font-weight: 600;">Do I need to change my phone number?</h4>
+          <p>No! We work with your existing business phone number. Simple forwarding setup takes 2 minutes.</p>
+        </div>
+        
+        <div style="margin-bottom: 24px;">
+          <h4 style="margin-bottom: 8px; font-weight: 600;">What if I'm already on another call?</h4>
+          <p>The system only activates when calls actually go to voicemail. If you answer, nothing happens.</p>
+        </div>
+        
+        <div style="margin-bottom: 24px;">
+          <h4 style="margin-bottom: 8px; font-weight: 600;">Can I customize the text messages?</h4>
+          <p>Absolutely. We'll set up messages that match your company's voice and tone during setup.</p>
+        </div>
+        
+        <div style="margin-bottom: 24px;">
+          <h4 style="margin-bottom: 8px; font-weight: 600;">What if I get spam calls?</h4>
+          <p>Built-in filtering identifies and blocks known spam numbers. Real customer calls get responses.</p>
+        </div>
+        
+        <div style="margin-bottom: 24px;">
+          <h4 style="margin-bottom: 8px; font-weight: 600;">How quickly can I cancel?</h4>
+          <p>Cancel anytime with one click. No contracts, no penalties, no questions asked.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section" style="background: var(--green); color: var(--white); text-align: center;">
+    <div class="container">
+      <h2>Stop Losing Leads Today</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 32px;">Start capturing every missed call for just $8/month</p>
+      <a href="#" class="btn" style="background: var(--white); color: var(--green); font-size: 1.2rem; padding: 20px 40px;">Start 7-Day Free Trial →</a>
+      <p style="margin-top: 20px; opacity: 0.8;">Setup in 2 hours • No contracts • Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 TradeWire. All rights reserved.</p>
+      <p style="margin-top: 8px;"><a href="index.html" style="color: var(--blue);">← Back to All Automations</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO for Contractors - Starting at $135/month | TradeWire</title>
+  <meta name="description" content="Professional SEO bundles for contractors starting at $135/month. Get what $5,000/month agencies do for 97% less. Complete content + backlink packages.">
+  <meta property="og:title" content="SEO for Contractors - Starting at $135/month | TradeWire">
+  <meta property="og:description" content="Professional SEO bundles for contractors. Complete content and backlink packages for 97% less than agencies."
+  <link rel="canonical" href="https://tradewire.ai/seo">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --blue: #2563eb; --blue-dark: #1d4ed8; --blue-light: #dbeafe; 
+      --dark: #0f172a; --gray-900: #1e293b; --gray-700: #334155; --gray-500: #64748b;
+      --gray-300: #cbd5e1; --gray-100: #f1f5f9; --white: #ffffff; --green: #22c55e;
+      --orange: #f59e0b; --red: #ef4444; --purple: #8b5cf6; --radius: 12px;
+    }
+    body { font-family: 'Inter', sans-serif; color: var(--gray-900); line-height: 1.6; background: var(--white); }
+    
+    /* Navigation */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-100); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; }
+    .logo { font-weight: 800; font-size: 1.4rem; color: var(--blue); text-decoration: none; }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--gray-700); font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta { background: var(--blue); color: var(--white) !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; transition: all 0.2s; }
+    .nav-cta:hover { background: var(--blue-dark); }
+    
+    /* Hero */
+    .hero { padding: 140px 24px 80px; background: linear-gradient(135deg, var(--purple) 0%, #7c3aed 100%); color: var(--white); text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(255,255,255,0.2); color: var(--white); padding: 6px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+    .hero-stats { display: flex; justify-content: center; gap: 40px; margin: 30px 0; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-number { font-size: 2.5rem; font-weight: 900; margin-bottom: 4px; }
+    .stat-label { font-size: 0.9rem; opacity: 0.9; }
+    .hero p { font-size: 1.3rem; opacity: 0.9; max-width: 700px; margin: 0 auto 40px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; border-radius: 10px; font-size: 1.1rem; font-weight: 600; text-decoration: none; border: none; cursor: pointer; transition: all 0.2s; }
+    .btn-primary { background: var(--white); color: var(--purple); }
+    .btn-primary:hover { background: var(--gray-100); transform: translateY(-2px); }
+    .btn-secondary { background: transparent; color: var(--white); border: 2px solid var(--white); }
+    
+    /* SEO Services */
+    .section { padding: 80px 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-title { font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 20px; text-align: center; }
+    .section-subtitle { font-size: 1.2rem; color: var(--gray-500); margin-bottom: 40px; text-align: center; }
+    
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 40px; }
+    .service-card { background: var(--white); border: 2px solid var(--gray-100); border-radius: var(--radius); padding: 32px; text-align: center; transition: all 0.3s; position: relative; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); border-color: var(--purple); }
+    .service-card.featured { border-color: var(--purple); background: linear-gradient(135deg, #f3f4f6 0%, var(--white) 100%); }
+    .service-card.featured::before { content: "MOST POPULAR"; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--purple); color: var(--white); padding: 4px 16px; border-radius: 50px; font-size: 0.75rem; font-weight: 700; }
+    
+    .service-icon { font-size: 3rem; margin-bottom: 16px; }
+    .service-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
+    .service-description { font-size: 0.95rem; color: var(--gray-500); margin-bottom: 20px; line-height: 1.5; }
+    .service-price { font-size: 2.2rem; font-weight: 800; color: var(--purple); margin-bottom: 4px; }
+    .service-price .currency { font-size: 1.4rem; }
+    .service-price .period { font-size: 1rem; color: var(--gray-500); font-weight: 500; }
+    .service-savings { font-size: 0.85rem; color: var(--green); font-weight: 600; margin-bottom: 20px; }
+    .service-features { text-align: left; margin: 20px 0; font-size: 0.9rem; }
+    .service-features ul { list-style: none; }
+    .service-features li { margin-bottom: 6px; position: relative; padding-left: 20px; }
+    .service-features li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 800; }
+    .service-cta { width: 100%; margin-top: 20px; background: var(--purple); color: var(--white); }
+    .service-cta:hover { background: var(--purple); opacity: 0.9; }
+    
+    /* Problem/Solution */
+    .problem { background: var(--gray-50); }
+    .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
+    .problem-card { background: var(--white); padding: 32px; border-radius: var(--radius); border-left: 4px solid var(--red); }
+    .problem-card h3 { font-size: 1.4rem; font-weight: 700; color: var(--red); margin-bottom: 12px; }
+    .problem-stat { font-size: 2.5rem; font-weight: 800; color: var(--red); margin-bottom: 8px; }
+    
+    /* Comparison */
+    .comparison { background: var(--dark); color: var(--white); text-align: center; }
+    .comparison h2 { color: var(--white); }
+    .comparison-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 40px; }
+    .comparison-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 32px; }
+    .comparison-card h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+    .comparison-price { font-size: 2rem; font-weight: 800; color: var(--red); margin-bottom: 16px; }
+    .comparison-card.tradewire { border-color: var(--green); background: rgba(34,197,94,0.1); }
+    .comparison-card.tradewire .comparison-price { color: var(--green); }
+    
+    /* Bundles */
+    .bundles { background: var(--blue-50); }
+    .bundles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .bundle-card { background: var(--white); border: 2px solid var(--blue); border-radius: var(--radius); padding: 24px; text-align: center; }
+    .bundle-name { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; color: var(--blue); }
+    .bundle-price { font-size: 1.8rem; font-weight: 800; color: var(--purple); margin-bottom: 8px; }
+    .bundle-savings { font-size: 0.9rem; color: var(--green); font-weight: 600; margin-bottom: 16px; }
+    .bundle-includes { font-size: 0.85rem; color: var(--gray-500); margin-bottom: 16px; }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero-stats { gap: 24px; }
+      .services-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">TradeWire</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">All Automations</a>
+        <a href="bundles.html">Bundles</a>
+        <a href="book.html" class="nav-cta">Start Free Trial</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">98% Cheaper Than SEO Agencies</div>
+      <h1>Professional SEO for Contractors<br>Starting at $135/month</h1>
+      
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-number">$135</div>
+          <div class="stat-label">Starting Price</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">97%</div>
+          <div class="stat-label">Cheaper Than Agencies</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">30-90</div>
+          <div class="stat-label">Days to Results</div>
+        </div>
+      </div>
+      
+      <p>Get what $5,000/month SEO agencies do for 98% less. Contractor-specific content, local optimization, and backlink building designed for the trades.</p>
+      
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+        <a href="seo-content-bundle.html" class="btn btn-primary">Start for $135/month →</a>
+        <a href="#services" class="btn btn-secondary">See All SEO Bundles</a>
+      </div>
+      <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">No setup fees • No contracts • 7-day free trial</p>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="section problem">
+    <div class="container">
+      <h2 class="section-title">Why Most Contractors Struggle with SEO</h2>
+      <p class="section-subtitle">You know you need to rank higher in Google, but traditional SEO is broken for contractors</p>
+      
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-stat">$3,500</div>
+          <h3>SEO Agencies Are Overpriced</h3>
+          <p>Traditional agencies charge $1,500-5,000/month with 6-month minimums. They use generic strategies that don't work for contractors and focus on vanity metrics, not leads.</p>
+        </div>
+        
+        <div class="problem-card">
+          <div class="problem-stat">6+ months</div>
+          <h3>Results Take Forever</h3>
+          <p>Agencies promise results "eventually" while burning through your marketing budget. You need leads next month, not next year. Most contractors give up before seeing any ROI.</p>
+        </div>
+        
+        <div class="problem-card">
+          <div class="problem-stat">85%</div>
+          <h3>Content Misses the Mark</h3>
+          <p>Generic business content doesn't work for contractors. You need content that speaks to homeowners with construction problems, uses trade language correctly, and targets local searches.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section-title">Choose Your SEO Services</h2>
+      <p class="section-subtitle">Professional contractor SEO for less than most people spend on coffee</p>
+      
+      <div class="services-grid">
+        <!-- SEO Content Bundle -->
+        <div class="service-card">
+          <div class="service-icon">📝</div>
+          <h3 class="service-name">SEO Content Bundle</h3>
+          <p class="service-description">Complete content strategy with 12-15 SEO articles per month, local optimization, and auto-publishing.</p>
+          <div class="service-price"><span class="currency">$</span>135<span class="period">/month</span></div>
+          <div class="service-savings">Save $4,865 vs SEO agency</div>
+          <div class="service-features">
+            <ul>
+              <li>12-15 SEO-optimized posts/month</li>
+              <li>Automatic WordPress publishing</li>
+              <li>Local SEO optimization</li>
+              <li>Keyword research included</li>
+              <li>Google indexing automation</li>
+            </ul>
+          </div>
+          <a href="seo-content-bundle.html" class="btn service-cta">Start Free Trial</a>
+        </div>
+        
+        <!-- Super SEO Bundle -->
+        <div class="service-card featured">
+          <div class="service-icon">👑</div>
+          <h3 class="service-name">Super SEO Bundle</h3>
+          <p class="service-description">Complete SEO domination: content + backlinks + priority support for total market control.</p>
+          <div class="service-price"><span class="currency">$</span>285<span class="period">/month</span></div>
+          <div class="service-savings">Save $7,715 vs premium agency</div>
+          <div class="service-features">
+            <ul>
+              <li>Everything in Content Bundle</li>
+              <li>120+ outreach emails/month</li>
+              <li>5-10 quality backlinks/month</li>
+              <li>Broken link building campaigns</li>
+              <li>Priority support & strategy calls</li>
+            </ul>
+          </div>
+          <a href="super-seo-bundle.html" class="btn service-cta">Start Free Trial</a>
+        </div>
+        
+        <!-- Backlink Bundle -->
+        <div class="service-card">
+          <div class="service-icon">🔗</div>
+          <h3 class="service-name">Backlink Bundle</h3>
+          <p class="service-description">Authority building through 120+ monthly outreach emails and quality backlink acquisition.</p>
+          <div class="service-price"><span class="currency">$</span>150<span class="period">/month</span></div>
+          <div class="service-savings">Save $3,850 vs link building agency</div>
+          <div class="service-features">
+            <ul>
+              <li>120+ personalized outreach emails</li>
+              <li>40+ broken link pitches/month</li>
+              <li>Automated follow-up sequences</li>
+              <li>Domain authority monitoring</li>
+              <li>Monthly backlink reports</li>
+            </ul>
+          </div>
+          <a href="backlink-bundle.html" class="btn service-cta">Start Free Trial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Automation + SEO Combos -->
+  <section class="section bundles">
+    <div class="container">
+      <h2 class="section-title">SEO + Automation Combinations</h2>
+      <p class="section-subtitle">Complete business transformation packages</p>
+      
+      <div class="bundles-grid">
+        <div class="bundle-card">
+          <div class="bundle-name">Growth Package</div>
+          <div class="bundle-price">$224/month</div>
+          <div class="bundle-savings">10% bundle discount included</div>
+          <div class="bundle-includes">SEO Content Bundle + Automation Starter Bundle</div>
+          <a href="bundles.html" class="btn" style="background: var(--purple); color: var(--white);">Get Bundle</a>
+        </div>
+        
+        <div class="bundle-card">
+          <div class="bundle-name">Complete Package</div>
+          <div class="bundle-price">$507/month</div>
+          <div class="bundle-savings">vs $562 individual (10% off)</div>
+          <div class="bundle-includes">Super SEO Bundle + Complete Automation</div>
+          <a href="bundles.html" class="btn" style="background: var(--purple); color: var(--white);">Get Bundle</a>
+        </div>
+        
+        <div class="bundle-card">
+          <div class="bundle-name">Custom Combination</div>
+          <div class="bundle-price">Build Your Own</div>
+          <div class="bundle-savings">Mix any automation + SEO services</div>
+          <div class="bundle-includes">Choose exactly what your business needs</div>
+          <a href="bundles.html#calculator" class="btn" style="background: var(--purple); color: var(--white);">Build Bundle</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="section comparison">
+    <div class="container">
+      <h2>Stop Overpaying for Basic SEO</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 40px; color: rgba(255,255,255,0.7);">See how TradeWire SEO compares to traditional agencies</p>
+      
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <h3>Traditional SEO Agency</h3>
+          <div class="comparison-price">$3,500/month</div>
+          <p>+ 6-month contracts, setup fees, generic content, slow results, no construction expertise</p>
+        </div>
+        
+        <div class="comparison-card">
+          <h3>Content Marketing Agency</h3>
+          <div class="comparison-price">$2,500/month</div>
+          <p>+ Generic business content, no SEO focus, no backlinks, no local optimization</p>
+        </div>
+        
+        <div class="comparison-card tradewire">
+          <h3>TradeWire SEO Bundles</h3>
+          <div class="comparison-price">$135-285/month</div>
+          <p>✓ Contractor-specific ✓ Fast results ✓ No contracts ✓ Local focus ✓ Trade expertise</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section" style="background: var(--purple); color: var(--white); text-align: center;">
+    <div class="container">
+      <h2>Ready to Dominate Your Local Market?</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 32px;">Start ranking higher in Google for less than most contractors spend on lunch</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="seo-content-bundle.html" class="btn" style="background: var(--white); color: var(--purple); font-size: 1.2rem; padding: 20px 40px;">Start for $135/month</a>
+        <a href="book.html" class="btn" style="background: transparent; border: 2px solid white; color: white;">Book SEO Strategy Call</a>
+      </div>
+      <p style="margin-top: 20px; opacity: 0.8;">7-day free trial • No setup fees • Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--dark); color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center;">
+    <div class="container">
+      <p>© 2026 TradeWire. All rights reserved.</p>
+      <p style="margin-top: 8px;"><a href="index.html" style="color: var(--blue);">← Back to All Automations</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
