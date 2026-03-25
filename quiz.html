@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started - TradeWire Setup Quiz</title>
+  <meta name="description" content="Quick setup quiz to get your TradeWire automation configured perfectly for your business. Takes 2 minutes to complete.">
+  <link rel="canonical" href="https://tradewire.ai/quiz">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --blue: #2563eb; --blue-dark: #1d4ed8; --blue-light: #dbeafe; 
+      --dark: #0f172a; --gray-900: #1e293b; --gray-700: #334155; --gray-500: #64748b;
+      --gray-300: #cbd5e1; --gray-100: #f1f5f9; --white: #ffffff; --green: #22c55e;
+      --orange: #f59e0b; --red: #ef4444; --radius: 12px;
+    }
+    body { font-family: 'Inter', sans-serif; color: var(--gray-900); line-height: 1.6; background: var(--gray-100); }
+    
+    /* Container */
+    .container { max-width: 600px; margin: 0 auto; padding: 40px 24px; }
+    .quiz-card { background: var(--white); border-radius: var(--radius); padding: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+    
+    /* Header */
+    .quiz-header { text-align: center; margin-bottom: 32px; }
+    .quiz-header h1 { font-size: 2rem; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+    .quiz-header p { color: var(--gray-500); font-size: 1.1rem; }
+    .progress-bar { width: 100%; height: 8px; background: var(--gray-200); border-radius: 4px; margin-top: 20px; }
+    .progress-fill { height: 100%; background: var(--blue); border-radius: 4px; width: 0%; transition: width 0.3s; }
+    
+    /* Questions */
+    .question { display: none; }
+    .question.active { display: block; }
+    .question h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 20px; color: var(--dark); }
+    
+    /* Form Elements */
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--gray-700); }
+    .form-control { width: 100%; padding: 12px 16px; border: 2px solid var(--gray-200); border-radius: 8px; font-size: 1rem; transition: border-color 0.2s; }
+    .form-control:focus { outline: none; border-color: var(--blue); }
+    .form-select { width: 100%; padding: 12px 16px; border: 2px solid var(--gray-200); border-radius: 8px; font-size: 1rem; background: var(--white); }
+    
+    /* Radio Options */
+    .radio-group { display: grid; gap: 12px; }
+    .radio-option { display: flex; align-items: center; padding: 16px; border: 2px solid var(--gray-200); border-radius: 8px; cursor: pointer; transition: all 0.2s; }
+    .radio-option:hover { border-color: var(--blue); background: var(--blue-50); }
+    .radio-option.selected { border-color: var(--blue); background: var(--blue-50); }
+    .radio-option input { margin-right: 12px; }
+    .radio-option-content h4 { font-weight: 600; margin-bottom: 4px; }
+    .radio-option-content p { font-size: 0.9rem; color: var(--gray-500); }
+    
+    /* Buttons */
+    .btn-group { display: flex; gap: 16px; justify-content: space-between; margin-top: 32px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-size: 1rem; font-weight: 600; text-decoration: none; border: none; cursor: pointer; transition: all 0.2s; }
+    .btn-primary { background: var(--blue); color: var(--white); }
+    .btn-primary:hover { background: var(--blue-dark); }
+    .btn-secondary { background: var(--gray-200); color: var(--gray-700); }
+    .btn-secondary:hover { background: var(--gray-300); }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    
+    /* Summary */
+    .summary { display: none; text-align: center; }
+    .summary.active { display: block; }
+    .summary-price { font-size: 2.5rem; font-weight: 900; color: var(--green); margin: 20px 0; }
+    .summary-features { text-align: left; margin: 24px 0; }
+    .summary-features ul { list-style: none; }
+    .summary-features li { margin-bottom: 8px; position: relative; padding-left: 24px; }
+    .summary-features li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 800; }
+    
+    /* Loading State */
+    .btn-loading { position: relative; }
+    .btn-loading::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 16px; height: 16px; border: 2px solid transparent; border-top: 2px solid currentColor; border-radius: 50%; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+    
+    .hidden { display: none; }
+    
+    @media (max-width: 640px) {
+      .container { padding: 20px 16px; }
+      .quiz-card { padding: 24px; }
+      .btn-group { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="quiz-card">
+      <!-- Header -->
+      <div class="quiz-header">
+        <h1>Let's Get You Set Up!</h1>
+        <p>Quick 2-minute quiz to configure your automation perfectly</p>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+      
+      <!-- Question 1: Business Info -->
+      <div class="question active" id="question1">
+        <h3>Tell us about your business</h3>
+        <div class="form-group">
+          <label for="businessName">Business Name</label>
+          <input type="text" id="businessName" name="businessName" class="form-control" placeholder="e.g. Smith Construction LLC">
+        </div>
+        <div class="form-group">
+          <label for="businessType">What type of contractor are you?</label>
+          <select id="businessType" name="businessType" class="form-select">
+            <option value="">Select your trade</option>
+            <option value="spray-foam">Spray Foam Insulation</option>
+            <option value="drywall">Drywall</option>
+            <option value="concrete">Concrete</option>
+            <option value="roofing">Roofing</option>
+            <option value="hvac">HVAC</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="electrical">Electrical</option>
+            <option value="solar">Solar Installation</option>
+            <option value="general">General Contractor</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="location">Primary Service Area</label>
+          <input type="text" id="location" name="location" class="form-control" placeholder="e.g. Sacramento, CA">
+        </div>
+      </div>
+      
+      <!-- Question 2: Contact Info -->
+      <div class="question" id="question2">
+        <h3>How can we reach you?</h3>
+        <div class="form-group">
+          <label for="contactName">Your Name</label>
+          <input type="text" id="contactName" name="contactName" class="form-control" placeholder="e.g. John Smith">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="e.g. john@smithconstruction.com">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" class="form-control" placeholder="e.g. (555) 123-4567">
+        </div>
+      </div>
+      
+      <!-- Question 3: Current Challenges -->
+      <div class="question" id="question3">
+        <h3>What's your biggest challenge right now?</h3>
+        <div class="radio-group">
+          <div class="radio-option" data-value="missed-calls">
+            <input type="radio" name="challenge" value="missed-calls" id="challenge1">
+            <div class="radio-option-content">
+              <h4>Missing too many calls</h4>
+              <p>Calls come in when you're on jobs and you lose leads</p>
+            </div>
+          </div>
+          <div class="radio-option" data-value="follow-up">
+            <input type="radio" name="challenge" value="follow-up" id="challenge2">
+            <div class="radio-option-content">
+              <h4>Poor follow-up on estimates</h4>
+              <p>You send quotes but don't follow up consistently</p>
+            </div>
+          </div>
+          <div class="radio-option" data-value="reviews">
+            <input type="radio" name="challenge" value="reviews" id="challenge3">
+            <div class="radio-option-content">
+              <h4>Not enough Google reviews</h4>
+              <p>You do great work but don't get reviews to show it</p>
+            </div>
+          </div>
+          <div class="radio-option" data-value="leads">
+            <input type="radio" name="challenge" value="leads" id="challenge4">
+            <div class="radio-option-content">
+              <h4>Need more leads overall</h4>
+              <p>You want more consistent lead flow and visibility</p>
+            </div>
+          </div>
+          <div class="radio-option" data-value="everything">
+            <input type="radio" name="challenge" value="everything" id="challenge5">
+            <div class="radio-option-content">
+              <h4>All of the above</h4>
+              <p>You need help with multiple areas of your business</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Question 4: Business Volume -->
+      <div class="question" id="question4">
+        <h3>How many leads do you typically get per month?</h3>
+        <div class="radio-group">
+          <div class="radio-option" data-value="5-15">
+            <input type="radio" name="volume" value="5-15" id="volume1">
+            <div class="radio-option-content">
+              <h4>5-15 leads</h4>
+              <p>Small operation, looking to grow</p>
+            </div>
+          </div>
+          <div class="radio-option" data-value="15-30">
+            <input type="radio" name="volume" value="15-30" id="volume2">
+            <div class="radio-option-content">
+              <h4>15-30 leads</h4>
+              <p>Steady business, want to optimize</p>
+            </div>
+          </div>
+          <div class="radio-option" data-value="30-50">
+            <input type="radio" name="volume" value="30-50" id="volume3">
+            <div class="radio-option-content">
+              <h4>30-50 leads</h4>
+              <p>Growing fast, need automation</p>
+            </div>
+          </div>
+          <div class="radio-option" data-value="50+">
+            <input type="radio" name="volume" value="50+" id="volume4">
+            <div class="radio-option-content">
+              <h4>50+ leads</h4>
+              <p>High volume, need serious automation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Question 5: Current Tools -->
+      <div class="question" id="question5">
+        <h3>What tools do you currently use?</h3>
+        <div class="form-group">
+          <label for="currentCRM">CRM/Lead Management</label>
+          <select id="currentCRM" name="currentCRM" class="form-select">
+            <option value="">Select your CRM (or none)</option>
+            <option value="gohighlevel">GoHighLevel</option>
+            <option value="servicetitan">ServiceTitan</option>
+            <option value="jobber">Jobber</option>
+            <option value="housecall">Housecall Pro</option>
+            <option value="quickbooks">QuickBooks only</option>
+            <option value="excel">Excel/Google Sheets</option>
+            <option value="none">No CRM system</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="website">Website URL (if you have one)</label>
+          <input type="url" id="website" name="website" class="form-control" placeholder="https://yourwebsite.com">
+        </div>
+        <div class="form-group">
+          <label for="otherTools">Other tools you use</label>
+          <input type="text" id="otherTools" name="otherTools" class="form-control" placeholder="e.g. Calendly, Zapier, specific software">
+        </div>
+      </div>
+      
+      <!-- Summary & Purchase -->
+      <div class="summary" id="summary">
+        <h3>Perfect! Here's what we recommend:</h3>
+        <div id="recommendedPackage">
+          <!-- Dynamically populated based on answers -->
+        </div>
+        
+        <div style="background: var(--blue-50); padding: 20px; border-radius: 8px; margin: 24px 0;">
+          <h4 style="color: var(--blue); margin-bottom: 8px;">What happens next:</h4>
+          <p style="font-size: 0.9rem; color: var(--gray-600);">After purchase, you'll get immediate access to our setup guide and we'll have your automation live within 48 hours.</p>
+        </div>
+        
+        <button id="purchaseBtn" class="btn btn-primary" style="width: 100%; font-size: 1.2rem; padding: 16px;">
+          Start 7-Day Free Trial
+        </button>
+        <p style="font-size: 0.85rem; color: var(--gray-500); margin-top: 12px;">No credit card required • Cancel anytime • Setup in 48 hours</p>
+      </div>
+      
+      <!-- Navigation -->
+      <div class="btn-group">
+        <button id="prevBtn" class="btn btn-secondary hidden">← Previous</button>
+        <button id="nextBtn" class="btn btn-primary">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentQuestion = 1;
+    const totalQuestions = 5;
+    const answers = {};
+    
+    // Update progress bar
+    function updateProgress() {
+      const progress = (currentQuestion / totalQuestions) * 100;
+      document.getElementById('progressFill').style.width = progress + '%';
+    }
+    
+    // Show question
+    function showQuestion(n) {
+      document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+      document.getElementById(`question${n}`).classList.add('active');
+      
+      // Update buttons
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const btnGroup = document.querySelector('.btn-group');
+      
+      if (n === 1) {
+        prevBtn.classList.add('hidden');
+      } else {
+        prevBtn.classList.remove('hidden');
+      }
+      
+      if (n === totalQuestions) {
+        nextBtn.textContent = 'Get Recommendation →';
+      } else {
+        nextBtn.textContent = 'Next →';
+      }
+      
+      updateProgress();
+    }
+    
+    // Collect answers from current question
+    function collectAnswers(questionNum) {
+      switch(questionNum) {
+        case 1:
+          answers.businessName = document.getElementById('businessName').value;
+          answers.businessType = document.getElementById('businessType').value;
+          answers.location = document.getElementById('location').value;
+          break;
+        case 2:
+          answers.contactName = document.getElementById('contactName').value;
+          answers.email = document.getElementById('email').value;
+          answers.phone = document.getElementById('phone').value;
+          break;
+        case 3:
+          answers.challenge = document.querySelector('input[name="challenge"]:checked')?.value;
+          break;
+        case 4:
+          answers.volume = document.querySelector('input[name="volume"]:checked')?.value;
+          break;
+        case 5:
+          answers.currentCRM = document.getElementById('currentCRM').value;
+          answers.website = document.getElementById('website').value;
+          answers.otherTools = document.getElementById('otherTools').value;
+          break;
+      }
+    }
+    
+    // Validate current question
+    function validateQuestion(questionNum) {
+      switch(questionNum) {
+        case 1:
+          return document.getElementById('businessName').value && 
+                 document.getElementById('businessType').value && 
+                 document.getElementById('location').value;
+        case 2:
+          return document.getElementById('contactName').value && 
+                 document.getElementById('email').value && 
+                 document.getElementById('phone').value;
+        case 3:
+          return document.querySelector('input[name="challenge"]:checked');
+        case 4:
+          return document.querySelector('input[name="volume"]:checked');
+        case 5:
+          return true; // Optional fields
+        default:
+          return true;
+      }
+    }
+    
+    // Generate recommendation based on answers
+    function generateRecommendation() {
+      let recommendation = {
+        name: "Starter Bundle",
+        price: "$45/month",
+        description: "Perfect for getting started with automation",
+        features: [
+          "Missed Call Recovery ($8 value)",
+          "Review Autopilot ($16 value)", 
+          "Quote Follow-Up System ($28 value)"
+        ],
+        reason: "Based on your answers, this bundle addresses your main challenges while staying affordable."
+      };
+      
+      // Customize based on answers
+      if (answers.challenge === 'missed-calls') {
+        recommendation = {
+          name: "Missed Call Recovery",
+          price: "$8/month",
+          description: "Stop losing leads to missed calls",
+          features: [
+            "60-second auto text-back for every missed call",
+            "Captures contact info automatically",
+            "Works 24/7, even when you're on jobs"
+          ],
+          reason: "You mentioned missing calls is your biggest challenge. This automation will capture every lead."
+        };
+      } else if (answers.challenge === 'leads' || answers.volume === '5-15') {
+        recommendation = {
+          name: "Growth Package",
+          price: "$170/month",
+          description: "Complete automation + SEO for lead generation",
+          features: [
+            "Starter automation bundle (missed calls, reviews, follow-up)",
+            "SEO Content Bundle (12-15 articles/month)",
+            "Local SEO optimization",
+            "Automatic Google indexing"
+          ],
+          reason: "You need more leads. This combines automation with SEO content to drive consistent traffic."
+        };
+      } else if (answers.challenge === 'everything' || answers.volume === '30-50' || answers.volume === '50+') {
+        recommendation = {
+          name: "Core Business Bundle",
+          price: "$95/month",
+          description: "Complete lead and customer management automation",
+          features: [
+            "Everything in Starter Bundle",
+            "Lead Follow-Up Engine ($44 value)",
+            "No-Show Recovery ($9 value)",
+            "Complete email and SMS automation"
+          ],
+          reason: "With your business volume, you need comprehensive automation to handle all your leads efficiently."
+        };
+      }
+      
+      // Display recommendation
+      const packageDiv = document.getElementById('recommendedPackage');
+      packageDiv.innerHTML = `
+        <h4 style="color: var(--blue); font-size: 1.4rem; margin-bottom: 8px;">${recommendation.name}</h4>
+        <div class="summary-price">${recommendation.price}</div>
+        <p style="color: var(--gray-600); margin-bottom: 20px;">${recommendation.description}</p>
+        <div class="summary-features">
+          <ul>
+            ${recommendation.features.map(feature => `<li>${feature}</li>`).join('')}
+          </ul>
+        </div>
+        <div style="background: var(--gray-50); padding: 16px; border-radius: 8px; margin: 16px 0;">
+          <p style="font-size: 0.9rem; color: var(--gray-600);"><strong>Why this fits:</strong> ${recommendation.reason}</p>
+        </div>
+      `;
+      
+      // Store recommendation for purchase
+      answers.recommendation = recommendation;
+    }
+    
+    // Handle radio option selection
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.radio-option')) {
+        const option = e.target.closest('.radio-option');
+        const radioGroup = option.parentElement;
+        
+        // Remove selected from siblings
+        radioGroup.querySelectorAll('.radio-option').forEach(opt => opt.classList.remove('selected'));
+        
+        // Add selected to clicked option
+        option.classList.add('selected');
+        
+        // Check the radio button
+        const radio = option.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
+      }
+    });
+    
+    // Navigation handlers
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      collectAnswers(currentQuestion);
+      
+      if (!validateQuestion(currentQuestion)) {
+        alert('Please fill in all required fields before continuing.');
+        return;
+      }
+      
+      if (currentQuestion === totalQuestions) {
+        // Show summary
+        generateRecommendation();
+        document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+        document.querySelector('.summary').classList.add('active');
+        document.querySelector('.btn-group').style.display = 'none';
+        updateProgress();
+      } else {
+        currentQuestion++;
+        showQuestion(currentQuestion);
+      }
+    });
+    
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      if (currentQuestion > 1) {
+        currentQuestion--;
+        showQuestion(currentQuestion);
+      }
+    });
+    
+    // Purchase button handler
+    document.getElementById('purchaseBtn').addEventListener('click', async () => {
+      const btn = document.getElementById('purchaseBtn');
+      btn.classList.add('btn-loading');
+      btn.textContent = '';
+      btn.disabled = true;
+      
+      // Simulate API call to create lead + redirect to Stripe
+      setTimeout(() => {
+        // In production, this would:
+        // 1. Save the quiz answers to your CRM
+        // 2. Create a Stripe checkout session
+        // 3. Redirect to checkout
+        
+        // For now, redirect to expectations page
+        const params = new URLSearchParams({
+          package: answers.recommendation.name,
+          price: answers.recommendation.price,
+          email: answers.email,
+          name: answers.contactName,
+          business: answers.businessName
+        });
+        window.location.href = `expectations.html?${params.toString()}`;
+      }, 1500);
+    });
+    
+    // Initialize
+    showQuestion(1);
+  </script>
+</body>
+</html>
